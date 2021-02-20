@@ -4,6 +4,15 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+const buttonRight = document.getElementById('slideRight');
+const buttonLeft = document.getElementById('slideLeft');
+
+    buttonRight.onclick = function () {
+      document.getElementById('scrollcontainer').scrollLeft += 400;
+    };
+    buttonLeft.onclick = function () {
+      document.getElementById('scrollcontainer').scrollLeft -= 400;
+    };
 !(function($) {
   "use strict";
 

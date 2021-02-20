@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 
 export class HeaderComponent implements OnInit {
+  
   images = [
     {
       id: 1,
@@ -40,7 +41,10 @@ export class HeaderComponent implements OnInit {
   image2 = [...this.im.splice(0, 4)];
   i = 3;
   j=3;
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    
+    
+   }
   arrow() {
     this.i++;
     if (this.i > this.images.length-1) {
