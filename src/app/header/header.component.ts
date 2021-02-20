@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterContentInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as Parallax from 'parallax-js'
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,18 @@ import { Router } from '@angular/router';
 })
 
 export class HeaderComponent implements OnInit {
+
+
+  ngAfterContentInit(){
+  var scene = document.getElementById('background');
+  var parallaxInstance = new Parallax(scene, {
+    relativeInput: true
+    
+  });
+ 
+
+}
+
   
   images = [
     {
@@ -42,9 +55,8 @@ export class HeaderComponent implements OnInit {
   i = 3;
   j=3;
   constructor(private router: Router) {
-    
-    
-   }
+   
+    }
   arrow() {
     this.i++;
     if (this.i > this.images.length-1) {
